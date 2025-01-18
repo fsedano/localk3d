@@ -40,6 +40,7 @@ func main() {
 			time.Sleep(1 * time.Second)
 		}
 	}()
+
 	if err := r.Run(":8000"); err != nil {
 		log.Fatal("Unable to start:", err)
 	}
