@@ -35,7 +35,7 @@ registry:
 
 cluster-rebuild:
 	k3d cluster delete
-	k3d cluster create --registry-use k3d-myreg:5000 --api-port 6550 -p "8081:80@loadbalancer"
+	k3d cluster create --registry-use k3d-myreg:5000 --api-port 6550 -p "8081:80@loadbalancer" --agents 2
 registry-create:
 	k3d registry create myreg -p 5000
 	k3d cluster create --registry-use k3d-myreg:5000 --api-port 6550 -p "8081:80@loadbalancer"
