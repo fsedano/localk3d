@@ -1,0 +1,9 @@
+dependencies:
+- name: dapr
+  repository: https://dapr.github.io/helm-charts
+  version: 1.14.4
+- name: redis
+  repository: https://charts.bitnami.com/bitnami
+  version: 20.6.3
+digest: sha256:109e752b0d365996aa8267c37c00b8c7af71a60021a2cafd28c7e6e302476bbe
+generated: "2025-01-18T13:42:50.945782+01:00"

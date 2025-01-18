@@ -1,0 +1,9 @@
+dapr:
+  global:
+    registry: "k3d-myreg:5000/dapr"
+redis:
+  global:
+    redis:
+      password: "pepe"
+  image:
+    tag: "6.2"

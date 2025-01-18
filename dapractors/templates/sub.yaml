@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sub1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sub1
+  template:
+    metadata:
+      annotations:
+        dapr.io/app-id: "sub1"
+        dapr.io/enabled: "true"
+        dapr.io/id: "app1"
+        dapr.io/app-port: "8000"
+      labels:
+        app: sub1
+    spec:
+      containers:
+      - name: app1
+        image: k3d-myreg:5000/app1:latest
+        ports:
+        - containerPort: 8000
+        command:
+        - /app/sub
+      
